@@ -1,12 +1,13 @@
 import discord
 from discord.ext import commands
 from core.classes import Cog_Exension
+import json
 
 class welcome(Cog_Exension):
   
   @commands.Cog.listener()
   async def on_member_join(self,member):
-    channel = self.bot.get_chennel(977561547075379232)
+    channel = self.bot.get_chennel(801675359090769934)
     await channel.send(f'{member} join')
 
 

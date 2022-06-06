@@ -1,8 +1,10 @@
 import discord
 from discord.ext import commands
 import os
+import json
+import keep_alive
 
-bot = commands.Bot(command_prefix='$')
+bot = commands.Bot(command_prefix='/$')
 
 @bot.event
 async def on_ready():
@@ -33,6 +35,7 @@ for filesname in os.listdir('./cmds'):
 
 
 if __name__ == "__main__":
+  keep_alive.keep_alive()
   bot.run(os.getenv('Key'))
 
 

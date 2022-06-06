@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from core.classes import Cog_Exension
-
+import json
 class major(Cog_Exension):
   
   @commands.command()
